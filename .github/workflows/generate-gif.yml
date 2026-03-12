@@ -32,12 +32,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install github-readme-terminal requests python-dotenv
+          pip install github-readme-terminal requests python-dotenv Pillow
 
       - name: Generate GIF
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: python generate_with_stats.py
+        run: python generate_liquid_glass.py
 
       - name: Commit and push if changed
         run: |
