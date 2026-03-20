@@ -90,7 +90,7 @@ if has_stats:
     if github_stats.languages_sorted:
         top_langs = github_stats.languages_sorted[:3]
         langs_str = ", ".join([f"{lang[0]} ({lang[1]}%)" for lang in top_langs])
-        #stats_lines.append(f"\x1b[93mTop Langs:\x1b[0m   {langs_str}")
+        stats_lines.append(f"\x1b[93mTop Langs:\x1b[0m   {langs_str}")
 else:
     # Example data
     stats_lines = [
@@ -128,13 +128,15 @@ t.clone_frame(3)
 
 skills = [
     ("\x1b[94mCloud:\x1b[0m       ", "AWS, Azure, Google"),
-    ("\x1b[94mDevOps:\x1b[0m      ", "Terraform, Kubernetes, Docker, Jenkins, Git"),
+    ("\x1b[94mDevOps:\x1b[0m      ", "Terraform, Kubernetes, Docker, Jenkins, Git, Liquibase"),
     ("\x1b[94mCI/CD:\x1b[0m       ", "GitLab, GitHub Actions"),
     ("\x1b[94mMonitoring:\x1b[0m  ", "Grafana, Prometheus, Loki"),
     ("\x1b[94mTools:\x1b[0m       ", "SpringBoot, Kafka, RabbitMQ, MongoDB, SQL"),
     ("\x1b[94mOS:\x1b[0m          ", "Windows, Debian, Red Hat"),
     ("\x1b[94mLanguages:\x1b[0m   ", "Java, Python"),
 ]
+
+
 
 for i, (label, value) in enumerate(skills):
     t.gen_text(f"{label}{value}", row_num=4+i)
