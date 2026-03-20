@@ -422,7 +422,7 @@ t.gen_text("\x1b[96m=== Tech Stack ===\x1b[0m", row_num=3)
 t.clone_frame(3)
 
 skills = [
-    ("\x1b[94mCloud:\x1b[0m       ", "AWS, Azure, Google),
+    ("\x1b[94mCloud:\x1b[0m       ", "AWS, Azure, Google"),
     ("\x1b[94mDevOps:\x1b[0m      ", "Terraform, Kubernetes, Docker, Jenkins, Git, Liquibase"),
     ("\x1b[94mCI/CD:\x1b[0m       ", "GitLab, GitHub Actions"),
     ("\x1b[94mMonitoring:\x1b[0m  ", "Grafana, Prometheus, Loki"),
